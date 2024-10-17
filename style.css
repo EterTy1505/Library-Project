@@ -1,0 +1,125 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#frame {
+    width: 90%;
+    min-height: 90vh;
+    border: 5px double brown;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem;
+    align-content: baseline;
+    padding: 15px;
+}
+
+.book-block {
+    width: 9rem;
+}
+
+.book-card {
+    width: calc(100% - 2rem);
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: brown;
+    position: relative;
+}
+
+.book-remove {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.book-remove:hover {
+    opacity: 1;
+}
+
+.book-remove > img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.book-title {
+    font-family: 'Brush Script MT';
+    font-size: 1.7em;
+    font-weight: bold;
+    color: yellow;
+}
+
+.book-author {
+    font-family: 'Trebuchet MS';
+    color: coral;
+}
+
+.book-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS';
+}
+
+.book-pages {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.book-status {
+    background-color: rgba(130, 130, 130, 0.5);
+    color: white;
+    font-family: 'Trebuchet MS';
+    border: none;
+    cursor: pointer;
+}
+
+.book-status.read {
+    background-color: rgb(3, 207, 24);
+}
+
+#add-book-button {
+    width: 9rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px dashed #a52a2a;
+    color: brown;
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#add-book-button:hover {
+    opacity: 1;
+}
+
+#add-book-button > img {
+    filter: invert(24%) sepia(29%) saturate(3142%) hue-rotate(333deg) brightness(98%) contrast(96%);
+}
+
+dialog, dialog input, dialog button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+    justify-self: center;
+}
+
+form button[type='submit'] {
+    border: none;
+    padding: 0.5rem;
+    background-color: brown;
+    color: white;
+}
